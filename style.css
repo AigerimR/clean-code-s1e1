@@ -141,10 +141,14 @@
 .tasks-list__input_invisible {
   display: none;
 }
-.tasks-list .tasks-list__item.edit-mode .input[type="text"] {
+/* .tasks-list .tasks-list__item.edit-mode .input[type="text"]  */
+.tasks-list__item_edit-mode .input[type="text"] 
+{
   display: inline-block;
   width: 224px;
 }
-.tasks-list .tasks-list__item.edit-mode .input__label {
+/* .tasks-list .tasks-list__item.edit-mode .input__label  */
+.tasks-list__item_edit-mode .input__label 
+{
   display: none;
 }
