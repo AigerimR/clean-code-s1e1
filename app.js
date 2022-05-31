@@ -124,6 +124,10 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
+
+    let label = Array.from(listItem.children).find(el =>  el.classList.contains("input__label"));
+    label.classList.add("input__label_completed-task")
+    // console.log(Array.from(listItem.children).find(el =>  el.classList.contains("input__label")));
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -136,6 +140,8 @@ var taskIncomplete=function(){
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
+    let label = Array.from(listItem.children).find(el =>  el.classList.contains("input__label"));
+    label.classList.remove("input__label_completed-task")
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
