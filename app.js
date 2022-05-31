@@ -38,7 +38,7 @@ var createNewTaskElement=function(taskString){
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="input task";
+    editInput.className="input tasks-list__input_invisible task";
     checkBox.className="input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
@@ -96,6 +96,7 @@ var editTask=function(){
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
+        editInput.classList.add("tasks-list__input_invisible")
     }else{
         editInput.value=label.innerText;
         editBtn.innerText="Save";
